@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+
+    <title>Encomenda | Kit Multimédia 2020/2021</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.jpg">
+
+    <meta name="description" content="Personaliza e encomenda o teu Kit de Multimédia 2020/2021!">
+    <meta name="keywords"
+        content="EsACT, IPB, Multimédia, Kit de Multimédia, 2020/2021, Bragança, Mirandela, Portugal, Licenciatura">
+    <meta name="author" content="André Silva Moreira">
+
+    <meta property="og:url"
+        content="http://kitmultimediaesactipb.epizy.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kit Multimédia 2020/2021" />
+    <meta property="og:description" content="Personaliza e encomenda o teu Kit de Multimédia 2020/2021!" />
+    <meta property="og:image"
+        content="img/fav/favicon-32x32.jpg" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="js/produtos.js"></script>
+    <script src="js/functions.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body class="text-white debug">
+
+    <div class="container mt-5 pt-3 pb-5 container-backgroud">
+        <div class="pt-5 pb-4 text-center mb-3">
+            <h1>Encomenda o teu <i>Kit de Multimédia</i> aqui!</h1>
+            <p>Na compra de <strong>cinco ou mais peças</strong> do <i>kit</i> recebes um desconto!</p>
+        </div>
+
+        <form action="/php/submit.php" method="POST">
+
+            <div class="row">
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-6 ">
+                    <div class="form-group">
+                        <label for="inputNome">Nome</label>
+                        <input name="nome" type="text" class="form-control" id="inputNome" aria-describedby="emailHelp"
+                            placeholder="Inserir Nome" required>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputNumMec">Número Mecanográfico</label>
+                        <input name="numMec" type="text" class="form-control" id="inputNumMec" pattern="[a]{1}[0-9]{5}"
+                            placeholder="Inserir número mecanográfico" required>
+                    </div>
+                </div>
+
+                <div class="col-sm-1"></div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-6 ">
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input name="email" type="email" class="form-control" id="inputEmail"
+                            placeholder="Inserir Email" required>
+                        <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos o teu e-mail com
+                            terceiros.</small>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputNumeroTelemovel">Número de Telemóvel</label>
+                        <input name="telemovel" type="text" class="form-control" pattern="[0-9]{9}"
+                            id="inputNumeroTelemovel" aria-describedby="emailHelp"
+                            placeholder="Inserir número de telemóvel" required>
+                        <small id="numberHelp" class="form-text text-muted">Nunca compartilharemos o teu número de
+                            telemóvel com terceiros.</small>
+                    </div>
+                </div>
+
+                <div class="col-sm-1"></div>
+            </div>
+
+
+            <div class="container sticky-top">
+                <div class="row pt-2 pb-3" id="sticky">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-3 pt-2 text-center" style="margin: auto;">
+                        <h4 id="precoTexto">Total: 0&euro;</h4>
+                    </div>
+                    <div class="col-sm-6 mt-2">
+                        <button type="submit" class="btn btn-primary btn-block"
+                            id="submit-button"><b>Encomendar</b></button>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+
+            <div class="options">
+
+                <div class="row mt-2">
+                    <div class="col-sm-1"></div>
+
+                    <div class="col-sm-10 text-center">
+                        <h3 class="text-left" style="margin-bottom: 0;">Escolhe...</h3>
+                        <small class="text-left form-text text-muted mb-4"
+                            style="font-size: 0.8em;">&nbsp;&nbsp;&nbsp;&nbsp;...clicando na imagem para selecionar,
+                            depois escolhe a quantidade e o tamanho.</small>
+                        <div class="col-sm-1"></div>
+                    </div>
+                </div>
+
+
+
+                <script>
+                    Render();
+                </script>
+            </div>
+            
+
+            <div class="row mt-4 mb-5">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 text-center">
+                          <img src="img/measures01.jpg" class="img-fluid" style="border-radius: 50px; ">
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+       
+        </form>
+    </div>
+
+    <div class="container mt-4 mb-4" style="color: grey">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h6>Copyright &copy; 2020 Núcleo de Estudantes de Multimédia, EsACT-IPB. All rights reserved.</h6>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

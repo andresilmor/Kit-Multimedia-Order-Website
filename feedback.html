@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+
+    <title>Feedback | Kit Multimédia 2020/2021</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.jpg">
+
+    <meta name="description" content="Feedback sobre a realização da encomenda do Kit de Multimédia 2020/2021">
+    <meta name="keywords" content="EsACT, IPB, Multimédia, Kit de Multimédia, 2020/2021, Bragança, Mirandela, Portugal, Licenciatura">
+    <meta name="author" content="André Silva Moreira">
+
+    <meta property="og:url"
+        content="http://kitmultimediaesactipb.epizy.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kit Multimédia 2020/2021" />
+    <meta property="og:description" content="Personaliza e encomenda o teu Kit de Multimédia 2020/2021" />
+    <meta property="og:image"
+        content="img/fav/favicon-32x32.jpg" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="js/produtos.js"></script>
+    <script src="js/functions.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body class="text-white">
+
+
+    <div class="container mt-5 pt-5 pb-5 container-backgroud">
+        <div class="pt-5 pb-5 text-center mb-3">
+            <script>
+                var result = location.search.split('result=')[1];
+
+                if (result == "success") {
+                    document.write('<h1>Encomenda Efetuada com Sucesso!</h1><h4>Verifique o seu email com a confirmação da encomenda. Caso não encontre nos emails recebidos verifique o lixo e o spam.</h4>');
+                } else {
+                    document.write('<h1>Infelizmente ocorreu algum erro!<br>Por favor tenta de novo!</h1><h4>Erro: ' + result + '</h4>');
+                }
+           
+            </script>
+            <br>
+            <hr style="border: 1px solid white;">
+            <br>
+            <p><a class="btn btn-outline-light" role="button" href="/">Encomendar mais</a></p>
+        </div>
+    </div>
+
+    <div class="container mt-4 mb-4" style="color: grey">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h6>Copyright &copy; 2021 Núcleo de Estudantes de Multimédia, EsACT-IPB. All rights reserved.</h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
